@@ -105,7 +105,7 @@ class InfoAlumno extends React.Component {
     borrarM(alert, mark) {
         let self = this;
         axios
-            .put("/mark/deleteById/" + mark.id)
+            .put("/api/mark/deleteById/" + mark.id)
             .then(function (res) {
                 console.log("The Mark has been deleted successfully!");
                 alert.success("The Mark has been deleted successfully!");
@@ -122,7 +122,7 @@ class InfoAlumno extends React.Component {
     borrarP(alert, payment) {
         let self = this;
         axios
-            .put("/payment/deleteById/" + payment.id)
+            .put("/api/payment/deleteById/" + payment.id)
             .then(function (res) {
                 console.log("The payment has been deleted successfully!");
                 alert.success("The payment has been deleted successfully!");

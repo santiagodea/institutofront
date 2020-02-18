@@ -48,7 +48,7 @@ class AddMark extends React.Component {
 
 
         axios
-            .post("/mark/addMark", newMark)
+            .post("/api/mark/addMark", newMark)
             .then(function (res) {
                 console.log("A new mark has been added.");
                 alert.success("The mark has been loaded correctly.");
@@ -74,7 +74,7 @@ class AddMark extends React.Component {
         };
 
         axios
-            .put("/mark/update", newMark)
+            .put("/api/mark/update", newMark)
             .then(function (res) {
                 console.log("A new mark has been added.");
                 alert.success("The note for unit " + self.state.unitUpdate.unit + " has been updated successfully.");

@@ -55,7 +55,7 @@ class NewStudent extends Component {
         }
         console.log(sc);
         axios
-            .post("/studentCourse", sc)
+            .post("/api/studentCourse", sc)
             .then(function (res) {
                 console.log("The new Student was successfully aggregate.");
             })
@@ -86,7 +86,7 @@ class NewStudent extends Component {
             tel_secundario: self.state.tel_secundario
         };
         axios
-            .put("/student/update", student)
+            .put("/api/student/update", student)
             .then(function (res) {
                 console.log("The new student was updated successfully.");
                 alert.success("The new student was updated successfully.");
@@ -111,7 +111,7 @@ class NewStudent extends Component {
             tel_secundario: self.state.tel_secundario
         };
         axios
-            .post("/student", student)
+            .post("/api/student", student)
             .then(function (res) {
                 console.log("The new Student was successfully created.");
                 alert.success("The new Student was successfully created. ");

@@ -70,7 +70,7 @@ class OneCourse extends Component {
   getDataCourse() {
     let self = this;
     return axios
-      .get("/course/findByIdWithStudents/" + this.curso.id)
+      .get("/api/course/findByIdWithStudents/" + this.curso.id)
       .then(function (response) {
         const listaDeS = response.data.studentListDTO;
         self.setState({
@@ -90,7 +90,7 @@ class OneCourse extends Component {
       idStudent: estudiante.id
     }
     return axios
-      .get("/mark/marksBySC", { params: idCS })
+      .get("/api/mark/marksBySC", { params: idCS })
       .then(function (response) {
         const listaDeMark = response.data.marksListDTO;
         self.setState({
@@ -497,7 +497,7 @@ confirmacionEliminarAlumno(alert,estudiante){
       idStudent: estudiante.id
     }
     return axios
-      .put("/studentCourse/deleteById/", idCS)
+      .put("/api/studentCourse/deleteById/", idCS)
       .then(function (res) {
         console.log("The student has been successfully removed from the course!");
         alert.success("The student " + estudiante.surname + " "+estudiante.name + " has been successfully deleted from the course!");

@@ -96,7 +96,7 @@ class AddPayment extends React.Component {
             idStudent: self.props.data.id
         };
         axios
-            .post("/payment", newPayment)
+            .post("/api/payment", newPayment)
             .then(function (res) {
                 alert.success("The payment has been loaded correctly.");
                 console.log("A new payment has been added.");

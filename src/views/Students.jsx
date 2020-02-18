@@ -45,7 +45,7 @@ class Students extends Component {
   getStudents() {
     let self = this;
     return axios
-      .get("/student/findAll")
+      .get("/api/student/findAll")
       .then(function (response) {
         const listStudent = response.data;
         self.setState({
@@ -60,7 +60,7 @@ class Students extends Component {
   getPayments(student) {
     let self = this;
     return axios
-      .get("/payment/paymentsByStudent/" + student.id)
+      .get("/api/payment/paymentsByStudent/" + student.id)
       .then(function (response) {
         const listaDePayment = response.data.paymentListDTO;
         self.setState({

@@ -52,7 +52,7 @@ class NewCourse
       startTime: this.state.startTime
     };
     axios
-      .post("/course", course)
+      .post("/api/course", course)
       .then(function (res) {
         alert.success("The new Course was successfully created. " + course.name);
         console.log("The new Course was successfully created.");
