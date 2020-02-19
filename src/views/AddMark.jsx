@@ -16,7 +16,6 @@ class AddMark extends React.Component {
             units: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             unit: 1,
             unitUpdate: null
-            
         }
     }
 
@@ -56,6 +55,7 @@ class AddMark extends React.Component {
                 console.log(newMark);
             })
             .then(function (res) {
+                self.props.recargado();
                 self.props.volver(self.alum());
             })
             .catch(function (error) {
