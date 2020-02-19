@@ -39,20 +39,20 @@ class Sidebar extends Component {
             null
           )}
         <div className="logo">
-          <a
+          <h1
             href="#" 
             className="simple-text logo-mini"
           >
-            <div className="logo-img">
+            {/* <div className="logo-img">
               <img src={logo} alt="logo_image" />
-            </div>
+            </div> */}
             <a
             href="#"
             className="simple-text logo-normal"
           >
           </a>
-            English Language Centre
-          </a>
+            English Language Centre!
+          </h1>
         </div>
         <div className="sidebar-wrapper">
           <ul className="nav">
